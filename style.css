@@ -1,0 +1,41 @@
+.guide{
+    background-color: black;
+    color: white;
+    margin-left: 45px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    margin-right: 45px;
+}
+.header{
+    text-align: center;
+}
+#The_Body{
+    background-image:url(https://www.clipartmax.com/png/middle/152-1525148_vehicles-business-and-industry-factory-cartoon-png.png)
+}
+#myCanvas{
+    border-width: 10px;
+    background-color: white;
+    border-style: ridge;
+    
+background-image: url(https://www.clipartmax.com/png/middle/111-1112664_conveyor-belt-clipart-factory-conveyor-belt-clipart.png);
+
+
+}
+.Big_Red{
+    border-radius: 20;
+    background-color: tomato;
+
+    width: 25px;
+    height: 25px;
+}
+.Xconsole{
+    background-color: gray;
+    height: 250px;
+}
+.cname{
+    font-family: 'Syne Mono', monospace;
+}
+.switch{
+    height: 25px;
+    width: 25px;
+}
