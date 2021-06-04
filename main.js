@@ -1,31 +1,54 @@
-var canvas= new fabric.Canvas("myCanvas")
-block_width="90"
-block_height="90"
-playerX="0"
-playerY="0"
-player_img_tag=""
-block_image_object=""
-function player_update(){
-    fabric.Image.fromURL("Dr.Strange.png",function(Img){
-        player_img_tag=Img;
-        player_img_tag.scaleToWidth(150);
-        player_img_tag.scaleToHeight(140);
-        player_img_tag.set({
-            top:playerY,left:playerX
+var canvas = new fabric.Canvas('myCanvas');
+var block_image_height = 87;
+var block_image_width = 87;
+var ImageX = 0;
+var ImageY = 10;
+var Hero="Hero.png"
+var face="Face.png"
+var body="Body.png"
+var Right="sh.png"
 
-        });
-        canvas.add(player_object);
+function new_image(get_image) {
+        //ImageX=ImageX+10;
+        ImageY=ImageY+55;
+        var get_image=get_image;
+        fabric.Image.fromURL(get_image, function (Img) {
+        var player_image_object = Img;
+        player_image_object.scaleToHeight(block_image_height);
+        player_image_object.scaleToWidth(block_image_width);
+        player_image_object.set({
+            top:ImageX, 
+            left:ImageY
+        }
+        );
+        canvas.add(player_image_object);
+        console.log("Image was added");
+    }
+    )
+}
 
-    });
-function new_image(get_image){
-        fabric.Image.fromURL(get_image,function(Img){
-            block_image_object=Img;
-            block_image_object.scaleToWidth(block_image_width);
-            block_image_object.scaleToHeight(block_image_height);
-            block_image_object.set({
-                top:player_y,left:player_x
-            });
-            canvas.add(block_image_object);
-                    
-        })
-}}
+window.addEventListener("keydown", my_keydown);
+function my_keydown(e) {
+    console.log("A key was pressed");
+    var keyPressed = e.keyCode;
+    console.log(keyPressed);
+    if(keyPressed=="72"){
+     new_image(Hero);
+     console.log("Heres My Hero!");
+
+    }
+    if(keyPressed=="70"){
+      new_image(face);
+      console.log("Its Face Time");
+    }
+    if(keyPressed=="66"){
+        new_image(body);
+        console.log("Body Baby!");
+    
+    }
+    if(keyPressed=="82"){
+    new_image(Right);
+    console("Im out of corny jokes")
+    }
+    
+}

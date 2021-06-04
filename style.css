@@ -16,9 +16,10 @@
     border-width: 10px;
     background-color: white;
     border-style: ridge;
+    background-image: url(https://www.clipartmax.com/png/middle/111-1112664_conveyor-belt-clipart-factory-conveyor-belt-clipart.png);
+    min-width: 1250px;
+    min-height: 700px;
     
-background-image: url(https://www.clipartmax.com/png/middle/111-1112664_conveyor-belt-clipart-factory-conveyor-belt-clipart.png);
-
 
 }
 .Big_Red{
@@ -34,6 +35,7 @@ background-image: url(https://www.clipartmax.com/png/middle/111-1112664_conveyor
 }
 .cname{
     font-family: 'Syne Mono', monospace;
+    text-align: left;
 }
 .switch{
     height: 25px;
